@@ -1,0 +1,9 @@
+# Reflection
+
+In this project, I used the **YouTube Data API v3** to collect social media data for sentiment analysis. I selected this API because it is an official and reliable source that provides structured access to public video metadata, engagement statistics, and textual content. Authentication required generating an API Key through the Google Cloud Console, which I stored securely in a `.env` file to avoid exposing credentials in the script.
+
+The keyword I searched for was **"Artificial Intelligence"** chosen because it represents a widely discussed public topic with abundant user‑generated content. Using this keyword, I collected **144 video records**, meeting the assignment requirement of gathering at least 100 items. The dataset includes titles, descriptions, timestamps, channel names, engagement metrics, URLs, and platform information.
+
+During the data collection process, I encountered several limitations. The YouTube API restricts the number of results returned per request, and the default relevance‑based ranking initially produced fewer records than expected. Changing the search order to **"date"** allowed me to retrieve more results. Some fields, such as like counts or comment counts, were occasionally missing because certain videos had disabled statistics. However, no authentication errors occurred.
+
+Ethical considerations were essential throughout this project. Only publicly available metadata was collected, no personal or sensitive information was accessed, and API credentials were kept private. For future sentiment analysis, the **video title and description** fields will be the most valuable, as they contain the primary textual content needed to infer attitudes and emotional tone.
